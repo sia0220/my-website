@@ -1,57 +1,331 @@
-/* تنظیمات کلی */
-body {
-    font-family: Arial, sans-serif;
+@font-face {
+    font-family: 'amiri';
+    src: url('fonts/Amiri/Amiri-Regular.woff') format('amiri_regular'),
+         /* url('fonts/Amiri/Amiri-Bold.woff') format('amiri_bold');
+    font-weight: normal;
+    font-style: normal; */
+}
+html {
+    scroll-behavior: smooth;
+}
+
+p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+
+h1{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+
+.arrow_down {
+    font-size: 0.75rem;
+}
+* {
+    position: relative;
+    font-family: 'amiri';
+    direction: rtl;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    /* box-sizing: border-box; */
+    /* background-color: #FAF9F6; */
+    /* scroll-behavior: smooth; */
 }
 
-/* استایل هدر */
-header {
-    background-color: #007bff;
+body {
+    /* font-family: 'amiri'; */
+    line-height: 1.6;
+    font-weight:bold;
+}
+
+
+.navbar {
+
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    position: fixed;
+    direction: ltr;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    animation: changeColor 5s infinite;
+    
+}
+
+.navbar:hover{
+    background-color: #007BFF;
+}
+
+.links{
+    background-color: transparent;
+    
+}
+.logo{
+    background-color: transparent;
+}
+
+@keyframes changeColor {
+    0% {
+        background-color: #333;
+    }
+    25% {
+        background-color: #555;
+    }
+    50% {
+        background-color: #007BFF;
+    }
+    75% {
+        background-color: #28a745;
+    }
+    100% {
+        background-color: #333;
+    }
+}
+
+.navbar a {
+    color: #ffffff;
+    background-color:transparent;
+    text-decoration: none;
+    margin: 10px;
+    transition: color 1s ease;
+
+}
+
+.navbar a:hover {
+    /* text-decoration: underline; */
+    color: blueviolet;
+}
+.navbar button {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px; 
+    cursor: pointer;
+}
+.navbar button:hover {
+    background-color: rgba(255, 255, 255, 0.2); 
+}
+
+/* نوبار دوم */
+.navbar-secondary {
+    top: 58px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    position: fixed;
+    background-color: #242323;
+    padding: 1px 2px;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown {
+    position: relative;
+    background-color: transparent;
+    margin-inline: 20px;
+}
+
+.dropdown > a {
+    text-decoration: none;
     color: white;
+    /* padding: 1px 20px; */
+    padding: 0; 
+    display: inline-block;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 1rem;
+    transition: color 0.5s ease;
+
+}
+
+.dropdown > a:hover{
+    color: #FFA500;
+}
+
+.dropdown-menu {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out 0.1s, transform 0.5s ease-in-out 0.1s, visibility 0s linear 0.1s;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    min-width: 150px;
+    z-index: 10;
+
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #444646;
+    transition: color 0.5s ease;
+
+}
+
+.dropdown-menu a:hover {
+    color: #FFA500;
+}
+
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.hero {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(65, 12, 12);
     text-align: center;
-    padding: 20px 0;
+    padding: 2rem;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
 }
 
-nav ul li a {
+.hero button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 2s;
+}
+
+.hero button:hover {
+    background-color: #33b300;
+}
+
+.about {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(65, 12, 12);
+    text-align: center;
+    padding: 2rem;
+}
+
+.about h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.about p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.services {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(65, 12, 12);
+    text-align: center;
+    padding: 2rem;
+}
+
+.services h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.services p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.contact {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(65, 12, 12);
+    text-align: center;
+    padding: 2rem;
+}
+
+.contact h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #007BFF;
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s, opacity 0.5s ease;
+    opacity: 0;  /* دکمه در ابتدا مخفی است */
+    pointer-events: none; /* از کلیک‌پذیر بودن جلوگیری می‌کند */
+    cursor: pointer;
 }
 
-/* استایل محتوای اصلی */
-main {
-    width: 80%;
-    margin: 20px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+.back-to-top:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+    pointer-events: none
 }
 
-section h2 {
-    color: #007bff;
-}
-
-/* استایل فوتر */
-footer {
-    text-align: center;
-    padding: 10px;
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     background-color: #222;
     color: white;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 12px;
 }

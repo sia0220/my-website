@@ -2,37 +2,78 @@
 <html lang="fa">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سایت من</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>وب سایت من</title>
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
+    <div class="navbar">
+        <button href="#signup/login">ورود / ثبت نام</button>
+        
+        <div class="links">
+            <span class="logo" >وب سایت من</span>
+            <a href="index.html">خانه</a>
+            <a href="#about">درباره ما</a>
+            <a href="#services">خدمات</a>
+            <a href="#contact">تماس با ما</a>
+        </div>
+    </div>
+    <div class="navbar-secondary">
+        <div class="dropdown">
+            <a title="فیلم">فیلم<span class="arrow_down">▼</span></a>
+            <div class="dropdown-menu">
+                <a href="#anim">انیمیشن</a>
+                <a href="#komed">کمدی</a>
+                <a href="#vashsh">وحشت</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a  title="سریال">سریال<span class="arrow_down">▼</span></a>
+            <div class="dropdown-menu">
+                <a href="#anim">انیمیشن</a>
+                <a href="#komed">کمدی</a>
+                <a href="#vashsh">وحشت</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#irani">ایرانی</a>
+        </div>
+        <div class="dropdown">
+            <a href="#khareji">خارجی</a>
+        </div>
+    </div>
+    
 
-    <!-- هدر سایت -->
-    <header>
-        <h1>به سایت من خوش آمدید</h1>
-        <nav>
-            <ul>
-                <li><a href="#">صفحه اصلی</a></li>
-                <li><a href="#">درباره ما</a></li>
-                <li><a href="#">خدمات</a></li>
-                <li><a href="#">تماس با ما</a></li>
-            </ul>
-        </nav>
-    </header>
+    <section id="hero" class="hero">
+        <h1>به وب سایت من خوش اومدید</h1>
+        <p>محتوای شگفت انگیز را کشف کنید و ویژگی های ارائه شده ما را کشف کنید.</p>
+        <button>شروع کن</button>
+    </section>
 
-    <!-- محتوای اصلی -->
-    <main>
-        <section>
-            <h2>عنوان بخش</h2>
-            <p>این یک متن نمونه برای بخش محتوای سایت شما است.</p>
-        </section>
-    </main>
+    <section id="about" class="about">
+        <h1>درباره ما</h1>
+        <p>محتوای شگفت انگیز را کشف کنید و ویژگی های ارائه شده ما را کشف کنید.</p>
+    </section>
 
-    <!-- فوتر سایت -->
-    <footer>
+    <section id="services" class="services">
+        <h1>خدمات</h1>
+        <p>محتوای شگفت انگیز را کشف کنید و ویژگی های ارائه شده ما را کشف کنید.</p>
+    </section>
+
+    <section id="contact" class="contact">
+        <h1>تماس با ما</h1>
+        <p>محتوای شگفت انگیز را کشف کنید و ویژگی های ارائه شده ما را کشف کنید.</p>
+    </section>
+
+    <button id="backToTop" class="back-to-top" title="Go to top">↑</button>
+
+    <div class="footer">
         <p>تمامی حقوق محفوظ است &copy; 2025</p>
-    </footer>
+    </div>
+    
 
+<script src="script.js"></script>
 </body>
 </html>
